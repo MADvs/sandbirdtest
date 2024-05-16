@@ -29,7 +29,8 @@ body {
     justify-content: space-around;
     align-items: center;
     z-index: 10;
-    padding-top: 7px;
+    padding: 7px 0;
+    background-color: #f3f3f3;
 }
 
 .navigation-bar a {
@@ -50,17 +51,46 @@ body {
 }
 
 /* --LANDING SECTION --*/
+.landing {
+  height: 50dvh;
+}
 
 .landing-text {
-  margin: 10px;
+  margin: 20px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center
 }
+
 .landing h1 {
-  font-size: calc(1.5rem + 3vw)
+  font-size: calc(1.5rem + 3vw);
+  margin: 10px;
+}
+
+.landing h2 {
+  font-size: calc(1rem + 1vw);
+  margin: 10px;
+}
+
+.landing .button {
+  font-size: calc(1rem + 0.7vw);
+  color: #f3f3f3;
+  text-decoration: none;
+  background-color: var(--waterblue);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.landing .button:hover {
+  animation: buttonHover 1s forwards;
+}
+
+@keyframes buttonHover {
+  0% {}
+  100% {color: black; background-color: var(--airblue); font-size: calc(1rem + 1vw);}
 }
 
 .wave-box {
@@ -89,9 +119,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   justify-content: center;
-  margin: 20px;
+  margin: 40px 20px;
+}
+
+.box h4 {
+  font-size: calc(1em + 1vw);
 }
 
 .grid {
@@ -105,6 +138,11 @@ body {
   z-index: 1;
   position: relative;
   padding-bottom: 30px;
+  text-align: center;
+}
+
+.info-section h3 {
+  font-size: calc(1em + 1.2vw);
 }
 
 /* -- PRICING SECTION -- */
