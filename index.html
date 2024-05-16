@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Data -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <title>Sandbird Web Design | Small Business Web Development</title>
+
+        <!-- Preloads-->
+        <link rel="canonical" href="https://www.sandbirdwebdesign.com">
+        <link rel="stylesheet" href="light.css">
+        <link rel="stylesheet" href="dark.css">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/images/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/images/favicons//safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <a class="logo" aria-label="click to go to home page" href="/index.html">
+                <img src="/images/logos/icon-light-logo-no-buffer.png" alt="Sandbird Web Design Logo" decoding="async" width="60" height="60"/>
+                <p>sandbird web design</p>
+            </a>
+            <button class="dark-mode-button top-dark-mode-button" aria-label="dark mode toggle">
+                <span aria-hidden="true" class="dark-toggle">
+                    <span class="DTspan"></span>
+                </span>
+            </button>
+            <div class="menu-icon">
+                <img src="/images/logos/menu-icon.svg" alt="Menu" decoding="async" width="50" height="50" onclick="openNav()"/>
+            </div>
+            <div class="navigation-bar">
+                <a href="/index.html" class="active">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/services.html">Services</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <div id="myNav" class="overlay">
+                <p class="closebtn" onclick="closeNav()">&times;</p>
+                <div class="overlay-content">
+                    <a href="/index.html">Home</a>
+                    <a href="/about.html">About</a>
+                    <a href="/services.html">Services</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+              </div>
+            </div>
+        </div>  
+    
+        <!-- Menu Icon Script-->
+	    <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+    </body>
+</html>
