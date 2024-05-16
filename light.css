@@ -41,7 +41,7 @@ body {
     margin: 0.2vw;
 }
 
-.active {
+.navigation-bar .active {
   color: var(--sandgold);
 }
 
@@ -123,6 +123,10 @@ th, td {
     .menu-icon {display: none;}
     .info-section {
       margin-top: -150px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
