@@ -23,17 +23,18 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
     </head>
-    <body>
+    <body id="body">
 
         <!-- Landing Section -->
         <section class="landing">
             <!-- Top Bar -->
             <div class="top-bar">
-                <a class="logo" aria-label="click to go to home page" href="/index.html">
-                    <img src="/images/logos/full-dark-logo-with-buffer.svg" alt="Sandbird Web Design Logo" decoding="async" width="120" height="90"/>
+                <a aria-label="click to go to home page" href="/index.html">
+                    <img id="logo" src="/images/logos/full-light-logo-with-buffer.svg" alt="Sandbird Web Design Logo" decoding="async" width="120" height="90"/>
                 </a>
+                <button id="darkModeButton" onclick="ToggleDarkMode()">Toggle</button>
                 <div class="menu-icon">
-                    <img src="/images/icons/menu-icon.svg" alt="Menu" decoding="async" width="40" height="40" onclick="openNav()"/>
+                    <img id="menuIcon" src="/images/icons/menu-icon-light.svg" alt="Menu" decoding="async" width="40" height="40" onclick="openNav()"/>
                 </div>
                 <div class="navigation-bar">
                     <a href="/index.html" class="active">Home</a>
@@ -55,8 +56,8 @@
                 </div>
             </div>
             <div class="landing-text">
-                <h1>SANDBIRD WEB DESIGN</h1>
-                <h2>We design, develop, and deploy custom-built websites to boost your small business.</h2>
+                <h1>Sandbird Web Design</h1>
+                <h2>We design, develop, and maintain custom-built websites to boost your small business.</h2>
                 <img src="/images/203293.png" alt="computer icon" height="100" width="100"/>
                 <a class="button" href="/contact.html">LET'S GET STARTED</a>
             </div>
@@ -75,14 +76,17 @@
                 <div class="box">
                     <h4>HAND-CRAFTED</h4>
                     <p>Nothing is built with pre-existing templates or frameworks. Each and every line of code is written by hand, so everything can be tailored specifically to your sites' needs.</p>
+                    <a href="/blog.html">LEARN MORE</a>
                 </div>
                 <div class="box">
                     <h4>RESPONSIVE DESIGN</h4>
                     <p>Your site will be fully responsive and adapt to devices of all shapes and sizes - from the smallest mobile phones to the widest desktop displays.</p>
+                    <a href="/blog.html">LEARN MORE</a>
                 </div>
                 <div class="box">
                     <h4>FULLY OPTIMIZED</h4>
-                    <p>Page builders like Wix, Wordpress, or Squarespace add unnecessary bloat to your site. Our sites are streamlined to prioritize faster load times, enhanced security, and greater accessability. </p>
+                    <p>Page builders like Wix, Wordpress, or Squarespace add unnecessary bloat to your site. Our sites are streamlined to prioritize faster load times, enhanced security, and greater accessability.</p>
+                    <a href="/blog.html">LEARN MORE</a>
                 </div>
             </div>
         </section>
@@ -139,6 +143,27 @@
 
             function closeNav() {
                 document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+
+        <!-- Toggle Dark Mode-->
+        <script>
+            const body = document.getElementById('body');
+            const logo = document.getElementById('logo');
+            const menuIcon = document.getElementById('menuIcon');
+            const wave = document.querySelector('.wave-path');
+            function ToggleDarkMode() {
+                if (!body.classList.contains('dark')) {
+                    body.classList.add('dark');
+                    logo.setAttribute('src', '/images/logos/full-dark-logo-with-buffer.svg');
+                    menuIcon.setAttribute('src', '/images/icons/menu-icon-dark.svg');
+                    wave.setAttribute('fill', 'rgb(27, 27, 27)');
+                } else {
+                    body.classList.remove('dark');
+                    logo.setAttribute('src', '/images/logos/full-light-logo-with-buffer.svg');
+                    menuIcon.setAttribute('src', '/images/icons/menu-icon-light.svg');
+                    wave.setAttribute('fill', '#449DD1');
+                }
             }
         </script>
     </body>

@@ -79,15 +79,12 @@ body {
   padding: 10px 20px;
   border-radius: 10px;
   margin: 20px;
+  transition: background-color 0.5s, color 0.5s, font-size 0.5s;
 }
 
 .landing .button:hover {
-  animation: buttonHover 1s forwards;
-}
-
-@keyframes buttonHover {
-  0% {}
-  100% {color: black; background-color: var(--airblue); font-size: calc(1rem + 1vw);}
+  background-color: var(--airblue);
+  font-size: calc(1rem + 1vw);
 }
 
 .wave-box {
@@ -122,6 +119,17 @@ body {
 
 .box h4 {
   font-size: calc(1em + 1vw);
+  margin: 10px;
+}
+
+.box p {
+  margin: 10px;
+}
+
+.box a {
+  margin: 10px;
+  color: var(--designblue);
+  text-decoration: none;
 }
 
 .grid {

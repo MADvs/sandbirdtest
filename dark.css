@@ -1,0 +1,10 @@
+.dark {
+    background-color: var(--designblue);
+    color: white;
+    .top-bar {
+        background-color: var(--designblue);
+    }
+    .info-section {
+        background-color: rgb(27, 27, 27);
+    }
+}
