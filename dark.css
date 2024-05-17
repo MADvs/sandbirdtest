@@ -16,9 +16,10 @@
     .landing .button {
         color: #f3f3f3;
         background-color: var(--blue3);
+        box-shadow: 0px 0px 20px 0px var(--blue1);
     }
       
     .landing .button:hover {
-        box-shadow: 0px 0px 20px 0px var(--blue1);
+        background-color: var(--blue2);
     }
 }

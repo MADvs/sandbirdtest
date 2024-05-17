@@ -30,7 +30,7 @@ body {
 
 .landing .button {
   color: #f3f3f3;
-  background-color: var(--red2);
+  background-color: var(--red3);
 }
 
 .landing .button:hover {
