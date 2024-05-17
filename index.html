@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1.0">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <title>Sandbird Web Design | Small Business Web Development</title>
+        <title>Kitsap Web Design | Small Business Web Development</title>
 
         <!-- Preloads-->
         <link rel="canonical" href="https://www.sandbirdwebdesign.com">
@@ -19,8 +19,8 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
         <link rel="manifest" href="/images/favicons/site.webmanifest">
-        <link rel="mask-icon" href="/images/favicons//safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
+        <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#ffc40d">
         <meta name="theme-color" content="#ffffff">
     </head>
     <body id="body">
@@ -30,9 +30,9 @@
             <!-- Top Bar -->
             <div class="top-bar">
                 <a aria-label="click to go to home page" href="/index.html">
-                    <img id="logo" src="/images/logos/full-light-logo-with-buffer.svg" alt="Sandbird Web Design Logo" decoding="async" width="120" height="90"/>
+                    <img id="logo" src="/images/logos/light.svg" alt="Kitsap Web Design Logo" decoding="async" width="90" height="80"/>
                 </a>
-                <button id="darkModeButton" onclick="ToggleDarkMode()">Toggle</button>
+                <button id="darkModeButton" onclick="ToggleDarkMode()">D</button>
                 <div class="menu-icon">
                     <img id="menuIcon" src="/images/icons/menu-icon-light.svg" alt="Menu" decoding="async" width="40" height="40" onclick="openNav()"/>
                 </div>
@@ -56,9 +56,9 @@
                 </div>
             </div>
             <div class="landing-text">
-                <h1>Sandbird Web Design</h1>
-                <h2>We design, develop, and maintain custom-built websites to boost your small business.</h2>
-                <img src="/images/203293.png" alt="computer icon" height="100" width="100"/>
+                <h1>Premium Website Services</h1>
+                <img src="/images/icons/203293.png" height="100" width="100" alt="computer icon" decoding="async"/>
+                <h2>We design, develop, and maintain custom-built websites for your small business.</h2>
                 <a class="button" href="/contact.html">LET'S GET STARTED</a>
             </div>
         </section>
@@ -71,11 +71,10 @@
 
         <!-- Info Section-->
         <section class="info-section">
-            <h3>WHY CHOOSE US?</h3>
             <div class="grid">
                 <div class="box">
                     <h4>HAND-CRAFTED</h4>
-                    <p>Nothing is built with pre-existing templates or frameworks. Each and every line of code is written by hand, so everything can be tailored specifically to your sites' needs.</p>
+                    <p>Nothing is built with pre-existing templates or frameworks. Each and every line of code is written by hand, so everything can be tailored to your sites' needs.</p>
                     <a href="/blog.html">LEARN MORE</a>
                 </div>
                 <div class="box">
@@ -85,7 +84,7 @@
                 </div>
                 <div class="box">
                     <h4>FULLY OPTIMIZED</h4>
-                    <p>Page builders like Wix, Wordpress, or Squarespace add unnecessary bloat to your site. Our sites are streamlined to prioritize faster load times, enhanced security, and greater accessability.</p>
+                    <p>Page builders like Wix or Wordpress add unnecessary bloat to your site. Our sites are streamlined to prioritize faster load times, enhanced security, and greater accessability.</p>
                     <a href="/blog.html">LEARN MORE</a>
                 </div>
             </div>
@@ -94,44 +93,9 @@
         <!-- Pricing Section -->
         <section class="pricing-section">
             <div class="box">
-                <h2>PRICING</h2>
-                <p>We offer two routes to getting your site up on the web:</p>
-                <div class="box">
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>LUMP SUM</th>
-                            <th>MONTHLY PLAN</th>
-                        </tr>
-                        <tr>
-                            <td>5 Page Static Site</td>
-                            <td>$1749 Down</td>
-                            <td>$0 Down, $149/mo</td>
-                        </tr>
-                        <tr>
-                            <td>Blog Integration</td>
-                            <td>+$50/post</td>
-                            <td>+$50/mo</td>
-                        </tr>
-                        <tr>
-                            <td>Logo Design</td>
-                            <td>+$100</td>
-                            <td>Included!</td>
-                        </tr>
-                        <tr>
-                            <td>Hosting Fees</td>
-                            <td>+$20/mo</td>
-                            <td>Included!</td>
-                        </tr>
-                    </table>
-                    <a href="services">LEARN MORE ABOUT OUR PLANS</a>
-                </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about-section">
-            <div class="box">
-                <h2></h2>
+                <span>STARTING AT</span>
+                <h3>$0 Down, $149/mo, 6 Month Minimum Contract</h3>
+                <p>For a standard 5-page static website.</p>
             </div>
         </section>
     
@@ -154,15 +118,15 @@
             const wave = document.querySelector('.wave-path');
             function ToggleDarkMode() {
                 if (!body.classList.contains('dark')) {
-                    body.classList.add('dark');
-                    logo.setAttribute('src', '/images/logos/full-dark-logo-with-buffer.svg');
+                    logo.setAttribute('src', "/images/logos/dark.svg");
                     menuIcon.setAttribute('src', '/images/icons/menu-icon-dark.svg');
                     wave.setAttribute('fill', 'rgb(27, 27, 27)');
+                    body.classList.add('dark');
                 } else {
-                    body.classList.remove('dark');
-                    logo.setAttribute('src', '/images/logos/full-light-logo-with-buffer.svg');
+                    logo.setAttribute('src', "/images/logos/light.svg");
                     menuIcon.setAttribute('src', '/images/icons/menu-icon-light.svg');
                     wave.setAttribute('fill', '#449DD1');
+                    body.classList.remove('dark');
                 }
             }
         </script>
