@@ -11,7 +11,6 @@
 
         <!-- Preloads-->
         <link rel="canonical" href="https://www.sandbirdwebdesign.com">
-        <link rel="stylesheet" href="critical.css">
         <link rel="stylesheet" href="light.css">
         <link rel="stylesheet" href="dark.css">
         
@@ -31,14 +30,14 @@
             <!-- Top Bar -->
             <div class="top-bar">
                 <a aria-label="click to go to home page" href="/index.html">
-                    <img id="logo" src="/images/logos/lightlogo.svg" alt="Kitsap Web Design Logo" decoding="async" width="90" height="80"/>
+                    <img id="logo" src="/images/logos/light.svg" alt="Kitsap Web Design Logo" decoding="async" width="90" height="80"/>
                 </a>
                 <a id="darkModeButton" onclick="ToggleDarkMode()" aria-label="Dark Mode Toggle">
                     <img id="darkToggle" src="/images/icons/sun-icon.svg" alt="Sun Icon" decoding="async" width="30" height="30"/>
                 </a>
-                <a class="menu-icon">
+                <div class="menu-icon">
                     <img id="menuIcon" src="/images/icons/menu-icon-light.svg" alt="Menu" decoding="async" width="40" height="40" onclick="openNav()"/>
-                </a>
+                </div>
                 <div class="navigation-bar">
                     <a href="/index.html" class="active">Home</a>
                     <a href="/about.html">About</a>
@@ -59,16 +58,15 @@
                 </div>
             </div>
             <div class="landing-text">
-                <h1>Small Business Website Services</h1>
+                <h1>Compare Our Plans</h1>
                 <img src="/images/icons/203293.png" height="100" width="100" alt="computer icon" decoding="async"/>
-                <h2>We design, develop, and maintain custom-built websites for your small business starting at $149/mo.</h2>
-                <a class="button" href="/contact.html">LET'S GET STARTED</a>
+                <h2>We offer two routes to getting your website up and running:</h2>
             </div>
         </section>
 
         <div class="wave-box">
             <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path class="wave-path" fill="#2C82B5" fill-opacity="1" d="M0,128L60,117.3C120,107,240,85,360,106.7C480,128,600,192,720,202.7C840,213,960,171,1080,149.3C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                <path class="wave-path" fill="#449DD1" fill-opacity="1" d="M0,128L60,117.3C120,107,240,85,360,106.7C480,128,600,192,720,202.7C840,213,960,171,1080,149.3C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
             </svg>
         </div>
 
@@ -92,6 +90,15 @@
                 </div>
             </div>
         </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section">
+            <div class="box">
+                <span>STARTING AT</span>
+                <h3>$0 Down, $149/mo, 6 Month Minimum Contract</h3>
+                <p>For a standard 5-page static website.</p>
+            </div>
+        </section>
     
         <!-- Menu Icon Script-->
 	    <script>
@@ -113,15 +120,15 @@
             const darkToggle = document.getElementById('darkToggle')
             function ToggleDarkMode() {
                 if (!body.classList.contains('dark')) {
-                    logo.setAttribute('src', "/images/logos/darklogo.svg");
+                    logo.setAttribute('src', "/images/logos/dark.svg");
                     menuIcon.setAttribute('src', '/images/icons/menu-icon-dark.svg');
                     wave.setAttribute('fill', '#192C3B');
                     darkToggle.setAttribute('src', '/images/icons/moon-icon.svg');
                     body.classList.add('dark');
                 } else {
-                    logo.setAttribute('src', "/images/logos/lightlogo.svg");
+                    logo.setAttribute('src', "/images/logos/light.svg");
                     menuIcon.setAttribute('src', '/images/icons/menu-icon-light.svg');
-                    wave.setAttribute('fill', '#2C82B5');
+                    wave.setAttribute('fill', '#449DD1');
                     darkToggle.setAttribute('src', '/images/icons/sun-icon.svg');
                     body.classList.remove('dark');
                 }
