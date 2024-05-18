@@ -112,7 +112,7 @@
         justify-content: center;
         margin: 20px 15px;
         text-align: center;
-        h4 {
+        h3 {
             font-size: calc(1em + 1vw);
             margin: 5px;
         }
