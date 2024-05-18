@@ -1,6 +1,6 @@
 /* -- Body -- */
 body {
-    color: var(--designblue);
+    color: var(--blue3);
     background-color: #e7e7e7;
 }
 
@@ -12,115 +12,39 @@ body {
     padding: 10px 5px;
 }
 
-.navigation-bar a {
-    color: var(--red3);
-    transition: background-color 0.25s, color 0.25s;
-}
-
-.navigation-bar a:hover {
-    background-color: var(--red1);
-    color: white;
-}
-
-.navigation-bar .active {
-    border-bottom: px solid 
+.navigation-bar { 
+    a {
+      color: var(--red3);
+      transition: background-color 0.25s, color 0.25s;
+    }
+    a:hover {
+      background-color: var(--red1);
+      color: var(--white);
+    }
+    .active {
+      background-color: var(--red3);
+      color: var(--white);
+    }
 }
 
 /* --LANDING SECTION --*/
 
-.landing .button {
-  color: #f3f3f3;
-  background-color: var(--red3);
-}
-
-.landing .button:hover {
-  background-color: var(--red1);
-}
-
-.wave-box {
-  display: flex;
-  width: 200dvw;
-  position: relative;
-  z-index: 0;
-}
-
-.wave {
-  animation: wave 10s ease-in-out infinite;
-}
-
-@keyframes wave {
-  0% {}
-  50% {
-    transform: translate(-300px, 0);
-  }
-  100% {
-    transform: translate(0,0);
-  }
+.landing {
+    .button {
+      background-color: var(--red3);
+      color: var(--white);
+    } 
+    .button:hover {
+      background-color: var(--red1);
+    }
 }
 
 /* -- INFO SECTION -- */
-.box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 40px 20px;
-  text-align: center;
-}
-
-.box h4 {
-  font-size: calc(1em + 1vw);
-  margin: 5px;
-}
-
-.box p {
-  margin: 5px;
-}
-
-.box a {
-  margin: 5px;
-  color: var(--designblue);
-  text-decoration: none;
-}
-
-.grid {
-  text-align: center;
-}
-
 .info-section {
-  margin-top: -70px;
-  background-color: var(--blue2);
-  color: white;
-  z-index: 1;
-  position: relative;
-  padding-bottom: 30px;
-  text-align: center;
-}
-
-.info-section h3 {
-  font-size: calc(1em + 1.2vw);
-}
-
-/* -- PRICING SECTION -- */
-th, td {
-  padding: 10px;
-}
-
-
-/* -- MEDIA QUERIES -- */
-@media screen and (max-width: 768px) {
-    .navigation-bar {display: none;}
-    .menu-icon {display: block;}
-}
-
-@media screen and (min-width: 768px) {
-    .menu-icon {display: none;}
-    .info-section {
-      margin-top: -150px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--blue2);
+    color: var(--white);
+    a {
+      color: var(--gold1);
     }
 }
 

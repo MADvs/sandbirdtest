@@ -1,25 +1,44 @@
 .dark {
-    background-color: rgb(20, 20, 20);
-    color: white;
-    .info-section {
-        background-color: #192C3B;
+    color: var(--white);
+    background-color: var(--black);
+
+    /* -- NAVIGATION BAR -- */
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5px;
     }
 
-    .navigation-bar a {
-        color: var(--airblue);
-    }
-    
-    .navigation-bar .active {
-      color: var(--sandgold);
+    .navigation-bar { 
+        a {
+        color: var(--gold3);
+        transition: background-color 0.25s, color 0.25s;
+        }
+        a:hover {
+        background-color: var(--gold1);
+        color: var(--black);
+        }
+        .active {
+        background-color: var(--gold2);
+        color: var(--black);
+        }
     }
 
-    .landing .button {
-        color: #f3f3f3;
-        background-color: var(--blue3);
+/* --LANDING SECTION --*/
+
+.landing {
+    .button {
+      background-color: var(--blue3);
+      box-shadow: 0px 0px 10px 0px var(--blue1);
+    } 
+    .button:hover {
         box-shadow: 0px 0px 20px 0px var(--blue1);
     }
-      
-    .landing .button:hover {
-        background-color: var(--blue2);
-    }
+}
+
+/* -- INFO SECTION -- */
+.info-section {
+    background-color: var(--blue3);
+}
 }

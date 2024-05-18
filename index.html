@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1.0">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <title>Kitsap Web Design | Small Business Web Development</title>
+        <title>FlameWing Web Design | Small Business Web Development</title>
 
         <!-- Preloads-->
         <link rel="canonical" href="https://www.sandbirdwebdesign.com">
@@ -36,9 +36,6 @@
                 <a id="darkModeButton" onclick="ToggleDarkMode()" aria-label="Dark Mode Toggle">
                     <img id="darkToggle" src="/images/icons/sun-icon.svg" alt="Sun Icon" decoding="async" width="30" height="30"/>
                 </a>
-                <a class="menu-icon">
-                    <img id="menuIcon" src="/images/icons/menu-icon-light.svg" alt="Menu" decoding="async" width="40" height="40" onclick="openNav()"/>
-                </a>
                 <div class="navigation-bar">
                     <a href="/index.html" class="active">Home</a>
                     <a href="/about.html">About</a>
@@ -56,6 +53,9 @@
                         <a href="/contact.html">Contact</a>
                     </div>
                 </div>
+                <a class="menu-icon">
+                    <img id="menuIcon" src="/images/icons/menu-icon-light.svg" alt="Menu" decoding="async" width="40" height="40" onclick="openNav()"/>
+                </a>
                 </div>
             </div>
             <div class="landing-text">
@@ -66,9 +66,10 @@
             </div>
         </section>
 
+        <!-- Transition Wave -->
         <div class="wave-box">
-            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path class="wave-path" fill="#2C82B5" fill-opacity="1" d="M0,128L60,117.3C120,107,240,85,360,106.7C480,128,600,192,720,202.7C840,213,960,171,1080,149.3C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            <svg class="wave" viewBox="0 0 1440 130" xmlns="http://www.w3.org/2000/svg">
+                <path class="wave-path" style="transform:translate(0, 0px); opacity:1" fill="#2C82B5" d="M0,52L80,62.8C160,74,320,95,480,101.8C640,108,800,100,960,88.8C1120,78,1280,65,1440,67.2C1600,69,1760,87,1920,78C2080,69,2240,35,2400,28.2C2560,22,2720,43,2880,54.2C3040,65,3200,65,3360,69.3C3520,74,3680,82,3840,82.3C4000,82,4160,74,4320,67.2C4480,61,4640,56,4800,65C4960,74,5120,95,5280,99.7C5440,104,5600,91,5760,84.5C5920,78,6080,78,6240,65C6400,52,6560,26,6720,21.7C6880,17,7040,35,7200,39C7360,43,7520,35,7680,30.3C7840,26,8000,26,8160,34.7C8320,43,8480,61,8640,56.3C8800,52,8960,26,9120,21.7C9280,17,9440,35,9600,49.8C9760,65,9920,78,10080,84.5C10240,91,10400,91,10560,91C10720,91,10880,91,11040,86.7C11200,82,11360,74,11440,69.3L11520,65L11520,130L11440,130C11360,130,11200,130,11040,130C10880,130,10720,130,10560,130C10400,130,10240,130,10080,130C9920,130,9760,130,9600,130C9440,130,9280,130,9120,130C8960,130,8800,130,8640,130C8480,130,8320,130,8160,130C8000,130,7840,130,7680,130C7520,130,7360,130,7200,130C7040,130,6880,130,6720,130C6560,130,6400,130,6240,130C6080,130,5920,130,5760,130C5600,130,5440,130,5280,130C5120,130,4960,130,4800,130C4640,130,4480,130,4320,130C4160,130,4000,130,3840,130C3680,130,3520,130,3360,130C3200,130,3040,130,2880,130C2720,130,2560,130,2400,130C2240,130,2080,130,1920,130C1760,130,1600,130,1440,130C1280,130,1120,130,960,130C800,130,640,130,480,130C320,130,160,130,80,130L0,130Z"/>
             </svg>
         </div>
 
@@ -82,12 +83,12 @@
                 </div>
                 <div class="box">
                     <h4>RESPONSIVE DESIGN</h4>
-                    <p>Your website will effortlessly adapt to any screen size and orientation, from compact mobile phones to spacious desktop displays, ensuring a user friendly experience across a diverse range of devices.</p>
+                    <p>Your website will adapt to any screen size, from compact mobile phones to spacious desktop displays, ensuring a user friendly experience across a diverse range of devices.</p>
                     <a href="/blog.html">LEARN MORE</a>
                 </div>
                 <div class="box">
                     <h4>FULLY OPTIMIZED</h4>
-                    <p>Page builders like Wix or WordPress often bog down your site with bloated code. Our streamlined approach guarantees a finely-tuned, secure, and highly accessible website that puts performance first.</p>
+                    <p>Page builders like Wix or WordPress often bog down your site with bloated code. Our approach guarantees a finely-tuned, secure, and highly accessible website that puts performance first.</p>
                     <a href="/blog.html">LEARN MORE</a>
                 </div>
             </div>
@@ -110,19 +111,20 @@
             const logo = document.getElementById('logo');
             const menuIcon = document.getElementById('menuIcon');
             const wave = document.querySelector('.wave-path');
-            const darkToggle = document.getElementById('darkToggle')
+            const darkToggle = document.getElementById('darkToggle');
+
             function ToggleDarkMode() {
                 if (!body.classList.contains('dark')) {
                     logo.setAttribute('src', "/images/logos/darklogo.svg");
                     menuIcon.setAttribute('src', '/images/icons/menu-icon-dark.svg');
-                    wave.setAttribute('fill', '#192C3B');
                     darkToggle.setAttribute('src', '/images/icons/moon-icon.svg');
+                    wave.setAttribute('fill', '#192C3B');
                     body.classList.add('dark');
                 } else {
                     logo.setAttribute('src', "/images/logos/lightlogo.svg");
                     menuIcon.setAttribute('src', '/images/icons/menu-icon-light.svg');
-                    wave.setAttribute('fill', '#2C82B5');
                     darkToggle.setAttribute('src', '/images/icons/sun-icon.svg');
+                    wave.setAttribute('fill', '#2C82B5');
                     body.classList.remove('dark');
                 }
             }

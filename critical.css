@@ -13,12 +13,24 @@
 	--red1: #EB4857;
 	--red2: #C7283B;
 	--red3: #A1061D;
+    --white: #E7E7E7;
+    --black: rgb(21, 21, 21);
 }
 
 @font-face {
     font-family: ThiccBoi;
     src: url(/fonts/thiccboi/THICCCBOI-Bold.ttf);
     font-display: swap;
+}
+
+@keyframes wave {
+    0% {}
+    50% {
+      transform: translate(-30%, 0);
+    }
+    100% {
+      transform: translate(0,0);
+    }
 }
 
 /* Hide body if screen is less than 320px: */
@@ -49,11 +61,7 @@
     }
 
     .navigation-bar a {
-        text-decoration: none;
-        font-size: 1.2em;
-        border-radius: 10px;
-        margin: 0.2vw;
-        padding: 3px 8px;
+        display: none;
     }
 
     /* -- Landing Section -- */
@@ -74,9 +82,7 @@
         }
         .button {
             font-size: calc(1rem + 0.7vw);
-            color: #f3f3f3;
             text-decoration: none;
-            background-color: var(--waterblue);
             padding: 10px 20px;
             border-radius: 10px;
             margin: 20px;
@@ -84,7 +90,46 @@
           }
     }
 
-    
+    .wave-box {
+        display: flex;
+        width: 200dvw;
+        margin: 0;
+        .wave {
+            animation: wave 10s ease-in-out infinite;
+        }
+    }
+
+    /* -- INFO SECTION -- */
+    .info-section {
+        margin-top: -2px;
+        text-align: center;
+      }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 15px;
+        text-align: center;
+        h4 {
+            font-size: calc(1em + 1vw);
+            margin: 5px;
+        }
+        p {
+            margin: 5px;
+        }
+        a {
+            margin: 5px;
+            text-decoration: none;
+        }
+    }
+  
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }
 
 /* Small devices (portrait tablets and large phones) */
@@ -94,6 +139,21 @@
 
 /* Medium devices (landscape tablets) */
 @media only screen and (min-width: 768px) {
+    .navigation-bar a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.2em;
+        border-radius: 10px;
+        margin: 0.2vw;
+        padding: 3px 8px;
+    }
+
+    .menu-icon {display: none;}
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
 
 }
 
