@@ -43,9 +43,6 @@ body {
 .info-section {
     background-color: var(--blue2);
     color: var(--white);
-    a {
-      color: var(--gold1);
-    }
 }
 
 
