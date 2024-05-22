@@ -2,6 +2,9 @@
 body {
     color: var(--blue3);
     background-color: #e7e7e7;
+    .hi {
+      color: var(--blue2);
+    }
 }
 
 /* -- NAVIGATION BAR -- */
@@ -14,7 +17,6 @@ body {
 
 .navigation-bar { 
     a {
-      color: var(--red3);
       transition: background-color 0.25s, color 0.25s;
     }
     a:hover {
@@ -45,6 +47,11 @@ body {
     color: var(--white);
 }
 
+/* -- FOOTER -- */
+.footer {
+    background-color: var(--blue2);
+    color: white;
+}
 
 /* --- CURTAIN OVERLAY --- */
 .overlay {  

@@ -1,6 +1,12 @@
 .dark {
     color: var(--white);
     background-color: var(--black);
+    .hi {
+        color: var(--gold1);
+    }
+    .link {
+        color: var(--gold2);
+    }
 
     /* -- NAVIGATION BAR -- */
     .top-bar {
@@ -37,8 +43,8 @@
     }
 }
 
-/* -- INFO SECTION -- */
-.info-section {
+/* -- FOOTER -- */
+.footer {
     background-color: var(--blue3);
 }
 }
