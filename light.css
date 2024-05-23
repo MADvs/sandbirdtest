@@ -1,7 +1,6 @@
 /* -- Body -- */
 body {
     color: var(--blue3);
-    background-color: #e7e7e7;
     .hi {
       color: var(--blue2);
     }
@@ -30,7 +29,6 @@ body {
 }
 
 /* --LANDING SECTION --*/
-
 .landing {
     .button {
       background-color: var(--red3);
@@ -39,7 +37,7 @@ body {
     .button:hover {
       background-color: var(--red1);
     }
-}
+  }
 
 /* -- INFO SECTION -- */
 .info-section {
@@ -51,6 +49,21 @@ body {
 .footer {
     background-color: var(--blue2);
     color: white;
+}
+
+/* -- BLOG CARDS -- */
+.blog-card {
+  box-shadow: 0px 0px 15px 1px var(--blue2);
+}
+
+.card-link {
+  background-color: var(--red3);
+  color: white;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.card-link:hover {
+  background-color: var(--red1);
 }
 
 /* --- CURTAIN OVERLAY --- */
